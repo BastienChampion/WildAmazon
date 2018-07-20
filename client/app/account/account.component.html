@@ -35,9 +35,10 @@
           <option value="admin">Admin</option>
         </select>
       </div>
-      <div class="row">
-        <div class="class-12">
-          <h3>My Wallet</h3>
+      <div class="wallet">
+        <div class="sold">My sold : {{ user.sold }} WTF</div>
+        <div class="button">To add 1 WTF to your wallet, click here :
+          <button class="btn btn-success" (click)="addWTF()">Add WTF</button>
         </div>
       </div>
       <button class="btn btn-primary" type="submit" [disabled]="!accountForm.form.valid">

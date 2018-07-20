@@ -4,6 +4,7 @@ import { AuthService } from '../services/auth.service';
 import { UserService } from '../services/user.service';
 import { User } from '../shared/models/user.model';
 
+
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
@@ -12,6 +13,7 @@ export class AccountComponent implements OnInit {
 
   user: User;
   isLoading = true;
+  sold = 0;
 
   constructor(private auth: AuthService,
               public toast: ToastComponent,
@@ -23,7 +25,10 @@ export class AccountComponent implements OnInit {
 
   getUser() {
     this.userService.getUser(this.auth.currentUser).subscribe(
-      data => this.user = data,
+      (data) => {
+        this.user = data;
+        // this.getWTF();
+      },
       error => console.log(error),
       () => this.isLoading = false,
     );
@@ -35,5 +40,16 @@ export class AccountComponent implements OnInit {
       error => console.log(error),
     );
   }
+
+  addWTF() {
+    if (this.user.sold !== 0) {
+      this.sold = this.user.sold;
+    }
+    this.user.sold += 1;
+  }
+
+  // getWTF() {
+  // this.user.sold = 50;
+  // }
 
 }
