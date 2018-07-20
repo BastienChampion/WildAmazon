@@ -1,9 +1,9 @@
 import { TestBed, async } from '@angular/core/testing';
-import { CatsComponent } from './cats.component';
+import { ProductsComponent } from './products.component';
 
-/*describe('Component: Cats', () => {
+/*describe('Component: Products', () => {
   it('should create an instance', () => {
-    let component = new CatsComponent();
+    let component = new ProductsComponent();
     expect(component).toBeTruthy();
   });
 });*/
