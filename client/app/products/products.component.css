@@ -1,3 +1,7 @@
+.products{
+  margin-top: 10vh;
+}
+
 .table td,
 .table th {
   width: 25%;
@@ -7,3 +11,4 @@ img{
   height:50px;
   width: 50px;
 }
+

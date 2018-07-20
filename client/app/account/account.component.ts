@@ -8,6 +8,7 @@ import { User } from '../shared/models/user.model';
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
+  styleUrls: ['./account.component.css'],
 })
 export class AccountComponent implements OnInit {
 
@@ -45,7 +46,7 @@ export class AccountComponent implements OnInit {
     if (this.user.sold !== 0) {
       this.sold = this.user.sold;
     }
-    this.user.sold += 1;
+    this.sold += 1;
   }
 
   // getWTF() {

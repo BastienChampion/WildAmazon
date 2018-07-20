@@ -20,7 +20,7 @@ export class ProductsComponent implements OnInit {
   addProductForm: FormGroup;
   name = new FormControl('', Validators.required);
   price = new FormControl('', Validators.required);
-  imageUrl = new FormControl('');
+  imageUrl = new FormControl('', Validators.required);
 
   constructor(private productService: ProductService,
               private formBuilder: FormBuilder,

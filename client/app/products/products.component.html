@@ -1,10 +1,10 @@
-
+<app-navbar></app-navbar>
 
 <app-loading [condition]="isLoading"></app-loading>
 
 <app-toast [message]="toast.message"></app-toast>
 
-<div class="card mb-3" *ngIf="!isLoading">
+<div class="card mb-3 products" *ngIf="!isLoading">
   <h4 class="card-header">Current products ({{ products.length }})</h4>
   <div class="card-body">
     <table class="table table-bordered">
